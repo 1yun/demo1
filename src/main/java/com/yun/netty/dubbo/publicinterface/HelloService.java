@@ -1,0 +1,6 @@
+package com.yun.netty.dubbo.publicinterface;
+
+//这是接口  是服务提供方和服务消费方都需要
+public interface HelloService {
+    String hello(String mes);
+}
