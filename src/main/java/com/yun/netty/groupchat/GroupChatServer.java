@@ -25,6 +25,7 @@ public class GroupChatServer {
             b.group(bossGroup,workerGroup)
                     .channel(NioServerSocketChannel.class)
                     .option(ChannelOption.SO_BACKLOG,128)
+                    //.handler() 针对bossGroup  childHandler针对worketGroup
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
